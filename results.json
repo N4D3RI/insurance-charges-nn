@@ -1,0 +1,96 @@
+{
+  "n_records": 1338,
+  "n_features_encoded": 8,
+  "total_params": 161,
+  "epochs_run": 266,
+  "best_epoch": 226,
+  "train": {
+    "mae": 2795.032083134141,
+    "rmse": 4467.676362996625,
+    "r2": 0.8617083683126593
+  },
+  "test": {
+    "mae": 2754.3000431260784,
+    "rmse": 4451.425489545972,
+    "r2": 0.8723648902082682
+  },
+  "verdict": "well balanced: train and test errors are close",
+  "baselines": {
+    "predict the mean": {
+      "mae": 9593.33846086229,
+      "rmse": 12465.610441715768,
+      "r2": -0.0009192486886582252
+    },
+    "linear regression": {
+      "mae": 4181.194769017374,
+      "rmse": 5796.284796584167,
+      "r2": 0.7835929664591621
+    },
+    "random forest": {
+      "mae": 2553.60906639433,
+      "rmse": 4587.882507886067,
+      "r2": 0.8644197237303527
+    }
+  },
+  "experiments": [
+    {
+      "config": "16",
+      "params": 161,
+      "val_mae": 2840.7551649231395,
+      "epochs": 266
+    },
+    {
+      "config": "64-32, no dropout",
+      "params": 2689,
+      "val_mae": 3051.7956280259295,
+      "epochs": 100
+    },
+    {
+      "config": "64-32, dropout 0.1",
+      "params": 2689,
+      "val_mae": 3036.3618735183777,
+      "epochs": 95
+    },
+    {
+      "config": "128-64-32, dropout 0.2",
+      "params": 11521,
+      "val_mae": 3324.5458672043765,
+      "epochs": 77
+    }
+  ],
+  "chosen_architecture": "16",
+  "feature_importance": [
+    {
+      "feature": "smoker_yes",
+      "mae_increase": 7022.300027419167
+    },
+    {
+      "feature": "age",
+      "mae_increase": 2621.16944660987
+    },
+    {
+      "feature": "bmi",
+      "mae_increase": 1655.90042933625
+    },
+    {
+      "feature": "children",
+      "mae_increase": 260.91321217621
+    },
+    {
+      "feature": "region_southwest",
+      "mae_increase": 208.15892086237182
+    },
+    {
+      "feature": "region_southeast",
+      "mae_increase": 95.89628436083467
+    },
+    {
+      "feature": "region_northwest",
+      "mae_increase": 76.8020251461653
+    },
+    {
+      "feature": "sex_male",
+      "mae_increase": 31.893818091111825
+    }
+  ]
+}
